@@ -3,18 +3,26 @@
 import PackageDescription
 
 let package = Package(
-    name: "AestheticKit",
-    platforms: [.iOS(.v16)],
-    products: [
-        .library(
-            name: "AestheticKit",
-            targets: ["AestheticKit"]),
-    ],
-    targets: [
-        .target(
-            name: "AestheticKit"),
-        .testTarget(
-            name: "AestheticKitTests",
-            dependencies: ["AestheticKit"]),
-    ]
+  name: "AestheticKit",
+  platforms: [.iOS(.v16)],
+  products: [
+    .library(
+      name: "AestheticKit",
+      targets: ["AestheticKit"]
+    ),
+  ],
+  dependencies: [
+    .package(url: "https://github.com/realm/SwiftLint", branch: "main")
+  ],
+  targets: [
+    .target(
+      name: "AestheticKit",
+      plugins: [.plugin(name: "SwiftLintBuildToolPlugin", package: "SwiftLint")]
+    ),
+    .testTarget(
+      name: "AestheticKitTests",
+      dependencies: ["AestheticKit"],
+      plugins: [.plugin(name: "SwiftLintBuildToolPlugin", package: "SwiftLint")]
+    ),
+  ]
 )

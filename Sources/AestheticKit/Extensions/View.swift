@@ -9,7 +9,10 @@ public extension View {
     }
   }
 
-  func geometryReader(in coordinateSpace: CoordinateSpace = .global, completion: @escaping (CGRect) -> Void) -> some View {
+  func geometryReader(
+    in coordinateSpace: CoordinateSpace = .global,
+    completion: @escaping (CGRect) -> Void
+  ) -> some View {
     background(GeometryReader { proxy in
       Color.clear
         .execute {
