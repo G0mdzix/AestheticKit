@@ -27,7 +27,6 @@ public struct IconView: View {
     }
   }
 
-
   public init(
     icon: Image,
     iconColor: Color = .primary,

@@ -11,7 +11,11 @@ public class DataScannerManager: NSObject, DataScannerViewControllerDelegate {
     self._error = error
   }
 
-  public func dataScanner(_ dataScanner: DataScannerViewController, didAdd addedItems: [RecognizedItem], allItems: [RecognizedItem]) {
+  public func dataScanner(
+    _ dataScanner: DataScannerViewController,
+    didAdd addedItems: [RecognizedItem],
+    allItems: [RecognizedItem]
+  ) {
     recognizedItems.append(contentsOf: addedItems)
   }
 

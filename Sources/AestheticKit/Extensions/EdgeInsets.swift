@@ -10,7 +10,12 @@ public extension EdgeInsets {
     bottom: 0,
     trailing: DefaultSpacings.large
   )
-    static let halfVertical = EdgeInsets(top: DefaultSpacings.large, leading: 0, bottom: DefaultSpacings.large, trailing: 0)
+    static let halfVertical = EdgeInsets(
+      top: DefaultSpacings.large,
+      leading: 0,
+      bottom: DefaultSpacings.large,
+      trailing: 0
+    )
 
     init(horizontal: CGFloat, vertical: CGFloat) {
         self.init(top: vertical, leading: horizontal, bottom: vertical, trailing: horizontal)

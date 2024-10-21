@@ -23,4 +23,3 @@ public extension InsettableShape {
       .background(self.fill(fillStyle))
   }
 }
-
