@@ -12,17 +12,17 @@ let package = Package(
     ),
   ],
   dependencies: [
-    .package(url: "https://github.com/realm/SwiftLint", branch: "main")
+    .package(url: "https://github.com/SimplyDanny/SwiftLintPlugins", revision: "0.57.0"),
   ],
   targets: [
     .target(
       name: "AestheticKit",
-      plugins: [.plugin(name: "SwiftLintBuildToolPlugin", package: "SwiftLint")]
+      plugins: [.plugin(name: "SwiftLintBuildToolPlugin", package: "SwiftLintPlugins")]
     ),
     .testTarget(
       name: "AestheticKitTests",
       dependencies: ["AestheticKit"],
-      plugins: [.plugin(name: "SwiftLintBuildToolPlugin", package: "SwiftLint")]
+      plugins: [.plugin(name: "SwiftLintBuildToolPlugin", package: "SwiftLintPlugins")]
     ),
   ]
 )
