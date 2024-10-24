@@ -12,7 +12,7 @@ let package = Package(
     ),
   ],
   dependencies: [
-    .package(url: "https://github.com/realm/SwiftLint", branch: "main")
+    .package(url: "https://github.com/realm/SwiftLint", revision: "0.57.0")
   ],
   targets: [
     .target(
